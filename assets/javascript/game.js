@@ -1,9 +1,10 @@
-$(document).ready(function() {
 
     var wins = 0;
     var losses = 0;
     var score = 0;
 
+    $(document).ready(function() {
+    
     var randomNumber = getRandomNumber(19, 120);
 
     $("#randomNumber").text("Random number: " + randomNumber);
