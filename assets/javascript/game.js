@@ -17,25 +17,21 @@ $(document).ready(function() {
       var gem3 = getRandomNumber(1, 12);
       var gem4 = getRandomNumber(1, 12);
       
-    
       $("#gem1").on("click", function() {
         score += gem1;
         $("#score").text("Your score so far: " + score);
         updateScore();
       });
-    
       $("#gem2").on("click", function() {
         score += gem2;
         $("#score").text("Your score so far: " + score);
         updateScore();
       });
-
       $("#gem3").on("click", function() {
         score += gem3;
         $("#score").text("Your score so far: " + score);
         updateScore();
       });
-    
       $("#gem4").on("click", function() {
         score += gem4;
         $("#score").text("Your score so far: " + score);
@@ -45,7 +41,7 @@ $(document).ready(function() {
       var updateScore = function() {
         if (randomNumber === score) {
           wins++;
-          $("#wins").text(wins);
+          $("#wins").text("Games won: " + wins);
           $("#randomNumber").empty();
           randomNumber = getRandomNumber(19,120);
           $("#randomNumber").text("Random number: " + randomNumber);
@@ -55,7 +51,7 @@ $(document).ready(function() {
         }
         if (randomNumber < score) {
           losses++;
-          $("#losses").text(losses);
+          $("#losses").text("Games lost: " + losses);
           $("#randomNumber").empty();
           randomNumber = getRandomNumber(19,120);
           $("#randomNumber").text("Random number: " + randomNumber);
@@ -63,9 +59,6 @@ $(document).ready(function() {
           $("#score").text("Your score so far: " + score)
           newValues();
         }
-    
       }
-    
     });
-    
     

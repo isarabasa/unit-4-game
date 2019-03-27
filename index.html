@@ -21,39 +21,19 @@
     <div class="instructions">
 
             <h2>Instructions:</h2>
-            <p>You will be given a random number at the begining of this game.</p>
-            <p>
-                There are four crystals below.
-                By clicking on a crystal, you will add a specific number of points
-                to your total score.
-            </p>
-            <p>
-                You win by matching your total score to the random number;
-                you lose the game if your score exceeds the random number.
-            </p>
-            <p>
-                Each crystal's value remains hidden until you click it.
-            </p>
-            <p>
-                Each crystal's value changes each time the game starts.
-            </p>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below. By clicking on a crystal, 
+                you will add a specific number of points to your total score.</p>
+            <p>You win the game by matching your total score to the random number;
+                you lose the game if your total score goes above the random number.</p>
+            <p>The value of each crystal its hidden from you until you click on it.</p>
+            <p>Each time the game starts, the game will change the value of each crystal.</p>
         </div>
 
         <div class="col-md-2 scoreboard text-center">
-                Wins: <span id="wins">0</span>  Losses: <span id="losses">0</span>
+             <p id="wins">Games won: 0</p>  <p id="losses">Games lost: 0</p>
         </div>
 
-        <br></br>
-    <div class="col-md-6 text-center">
-            <div class="numberbox">
-              <div class="random-number">
-                <p id=randomNumber>Random number:</p>
-              </div>
-              <div class="score">
-                <p id="score">Your score so far:</p>
-              </div>
-            </div>
-          </div>
     <br>
 
     <div class="row crystals text-center">
@@ -63,7 +43,17 @@
             <a id="gem4"><img src="assets/images/gem4.jpeg" alt="blue"></a>
           </div>
       
-  
+    <div class="col-md-6 text-center">
+        <div class="numberbox">
+            <div class="random-number">
+                <p id=randomNumber>Random number:</p>
+            </div>
+            <div class="score">
+                <p id="score">Your score so far:</p>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <script rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></script>
