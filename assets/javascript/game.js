@@ -2,74 +2,70 @@ $(document).ready(function() {
 
     var wins = 0;
     var losses = 0;
-    var currentScore = 0;
-    var getRandomNumber = function (min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      };
+    var score = 0;
+
+    var randomNumber = getRandomNumber(19, 120);
+
+    $("#randomNumber").text("Random number: " + randomNumber);
     
-      var randomNumber = getRandomNumber(19, 120);
+    function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
     
-      $("#randomNumber").html(randomNumber);
+      var gem1 = getRandomNumber(1, 12);
+      var gem2 = getRandomNumber(1, 12);
+      var gem3 = getRandomNumber(1, 12);
+      var gem4 = getRandomNumber(1, 12);
+      
     
-      var greenCrystal = getRandomNumber(1, 12);
-      var yellowCrystal = getRandomNumber(1, 12);
-      var blueCrystal = getRandomNumber(1, 12);
-      var redCrystal = getRandomNumber(1, 12);
-    
-      var newValues = function() {
-        greenCrystal = getRandomNumber(1, 12);
-        yellowCrystal = getRandomNumber(1, 12);
-        blueCrystal = getRandomNumber(1, 12);
-        redCrystal = getRandomNumber(1, 12);
-      };
-    
-    
-      $("#green-crystal").on("click", function() {
-        currentScore += greenCrystal;
-        $("#currentScore").html(currentScore);
+      $("#gem1").on("click", function() {
+        score += gem1;
+        $("#score").text("Your score so far: " + score);
         updateScore();
       });
     
-      $("#yellow-crystal").on("click", function() {
-        currentScore += yellowCrystal;
-        $("#currentScore").html(currentScore);
+      $("#gem2").on("click", function() {
+        score += gem2;
+        $("#score").text("Your score so far: " + score);
+        updateScore();
+      });
+
+      $("#gem3").on("click", function() {
+        score += gem3;
+        $("#score").text("Your score so far: " + score);
         updateScore();
       });
     
-      $("#blue-crystal").on("click", function() {
-        currentScore += blueCrystal;
-        $("#currentScore").html(currentScore);
-        updateScore();
-      });
-    
-      $("#red-crystal").on("click", function() {
-        currentScore += redCrystal;
-        $("#currentScore").html(currentScore);
+      $("#gem4").on("click", function() {
+        score += gem4;
+        $("#score").text("Your score so far: " + score);
         updateScore();
       });
     
       var updateScore = function() {
-        if (randomNumber === currentScore) {
+        if (randomNumber === score) {
           wins++;
-          $("#wins").html(wins);
+          $("#wins").text(wins);
           $("#randomNumber").empty();
           randomNumber = getRandomNumber(19,120);
-          $("#randomNumber").html(randomNumber);
-          currentScore = 0;
-          $("#currentScore").html(currentScore)
+          $("#randomNumber").text("Random number: " + randomNumber);
+          score = 0;
+          $("#score").text("Your score so far: " + score)
           newValues();
         }
-        if (randomNumber < currentScore) {
+        if (randomNumber < score) {
           losses++;
-          $("#losses").html(losses);
+          $("#losses").text(losses);
           $("#randomNumber").empty();
           randomNumber = getRandomNumber(19,120);
-          $("#randomNumber").html(randomNumber);
-          currentScore = 0;
-          $("#currentScore").html(currentScore)
+          $("#randomNumber").text("Random number: " + randomNumber);
+          score = 0;
+          $("#score").text("Your score so far: " + score)
           newValues();
         }
     
       }
     
     });
+    
+    
