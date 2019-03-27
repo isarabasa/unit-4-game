@@ -9,26 +9,65 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 </head>
 <body>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-        </script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-
     <div id = "header">
         <h1>
             Crystals Collector Game
         </h1>
     </div>
-    <div id = "Instructions">
-    </div>
-    <div id=finalScore>Your total score should nos exceed:
-    </div>
+    <div class="instructions">
 
+            <h2>Instructions:</h2>
+            <p>You will be given a random number at the begining of this game.</p>
+            <p>
+                There are four crystals below.
+                By clicking on a crystal, you will add a specific number of points
+                to your total score.
+            </p>
+            <p>
+                You win by matching your total score to the random number;
+                you lose the game if your score exceeds the random number.
+            </p>
+            <p>
+                Each crystal's value remains hidden until you click it.
+            </p>
+            <p>
+                Each crystal's value changes each time the game starts.
+            </p>
+        </div>
 
+        <div class="col-md-6 scoreboard text-center">
+                Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span>
+        </div>
 
+        <br></br>
+    <div class="col-md-6 text-center">
+            <div class="numberbox">
+              <div class="random-number">
+                <p>Random Number: <span id=randomNumber></span></p>
+              </div>
+              <div class="current-score">
+                <p>Your score so far: <span id="currentScore">0</span></p>
+              </div>
+            </div>
+          </div>
+    <br>
 
+    <div class="row crystals text-center">
+            <a id="green-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/gem1.jpeg" alt="green "></a>
+            <a id="yellow-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/gem2.jpeg" alt="yellow"></a>
+            <a id="red-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/gem3.jpeg" alt="red"></a>
+            <a id="blue-crystal" class="hvr-pop"><img class="img-responsive" src="assets/images/gem4.jpeg" alt="blue"></a>
+          </div>
+      
+  
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
 
