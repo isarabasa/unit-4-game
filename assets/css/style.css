@@ -1,5 +1,53 @@
 h1 {
-color: brown;
-font-size: 90%;
+margin-bottom: 100px !important;
+color: rgb(101, 191, 233);
+font-size: 900%;
 font-weight: 200;
+}
+
+body{
+    background-image: url(file:///Users/isabelarabasa/Desktop/code/unit-4-game/assets/images/background.jpeg);  
+}
+
+.instructions {
+    background-color: #aaa;
+    opacity: .9;
+    font-family: fantasy;
+}
+.instructions {
+    color: white;
+}
+
+#wins {
+    color: yellow;
+    font-size: 150%;
+    background-color: black;
+    opacity: .8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#losses {
+    color: yellow;
+    font-size: 150%;
+    background-color: black;
+    opacity: .8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#randomNumber {
+    color: white;
+    font-family: fantasy;
+    font-size: 200%;
+}
+
+#score {
+    color: white;
+    font-family: fantasy;
+    font-size: 200%;
+}
+
+#gem2 {
+    width: 200px;
+    padding: 5px;
+    margin: 30px;
 }
