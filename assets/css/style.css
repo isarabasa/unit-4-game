@@ -6,7 +6,7 @@ font-weight: 200;
 }
 
 body{
-    background-image: url(file:///Users/isabelarabasa/Desktop/code/unit-4-game/assets/images/background.jpeg);  
+    background-image: url(../images/background.jpeg);  
 }
 
 .instructions {
